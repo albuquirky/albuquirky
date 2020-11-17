@@ -3,6 +3,7 @@ package edu.cnm.deepdive.albuquirky.service;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Intent;
+import android.util.Log;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -77,10 +78,10 @@ public class GoogleSignInService {
 
   private void setAccount(GoogleSignInAccount account) {
     this.account = account;
-//    if (account != null) {
-//      //noinspection ConstantConditions
-//      Log.d(getClass().getSimpleName(), account.getIdToken());
-//    }
+    if (account != null) {
+      //noinspection ConstantConditions
+      Log.d(getClass().getSimpleName(), account.getIdToken());
+    }
   }
 
   private static class InstanceHolder {
