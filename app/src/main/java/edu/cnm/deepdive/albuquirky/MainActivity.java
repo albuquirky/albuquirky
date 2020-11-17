@@ -3,6 +3,7 @@ package edu.cnm.deepdive.albuquirky;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -13,10 +14,13 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import edu.cnm.deepdive.albuquirky.service.UserRepository;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 
 public class MainActivity extends AppCompatActivity {
 
   private AppBarConfiguration mAppBarConfiguration;
+  private UserRepository userRepository; // FIXME
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
     NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
     NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
     NavigationUI.setupWithNavController(navigationView, navController);
+    // FIXME This is just temporary to verify round trip.
+    userRepository = new UserRepository(this);
+    userRepository.getProfileFromServer()
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(
+            (user) -> Toast.makeText(this, user.getUsername(), Toast.LENGTH_LONG).show(),
+            (throwable) -> Toast.makeText(this, throwable.getMessage(), Toast.LENGTH_LONG).show()
+        );
   }
 
   @Override
