@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.albuquirky.ui.slideshow;
+package edu.cnm.deepdive.albuquirky.ui.commission;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

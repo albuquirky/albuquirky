@@ -3,23 +3,35 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/mobile_navigation"
-  app:startDestination="@+id/nav_home">
+  app:startDestination="@+id/nav_profile">
 
   <fragment
-    android:id="@+id/nav_home"
-    android:label="@string/menu_home"
-    android:name="edu.cnm.deepdive.albuquirky.ui.home.HomeFragment"
-    tools:layout="@layout/fragment_home"/>
+    android:id="@+id/nav_profile"
+    android:label="@string/menu_profile"
+    android:name="edu.cnm.deepdive.albuquirky.ui.profile.ProfileFragment"
+    tools:layout="@layout/fragment_profile"/>
 
   <fragment
-    android:id="@+id/nav_gallery"
-    android:label="@string/menu_gallery"
-    android:name="edu.cnm.deepdive.albuquirky.ui.gallery.GalleryFragment"
-    tools:layout="@layout/fragment_gallery"/>
+    android:id="@+id/nav_products"
+    android:label="@string/menu_products"
+    android:name="edu.cnm.deepdive.albuquirky.ui.products.ProductsFragment"
+    tools:layout="@layout/fragment_products"/>
 
   <fragment
-    android:id="@+id/nav_slideshow"
-    android:label="@string/menu_slideshow"
-    android:name="edu.cnm.deepdive.albuquirky.ui.slideshow.SlideshowFragment"
-    tools:layout="@layout/fragment_slideshow"/>
+    android:id="@+id/nav_commission"
+    android:label="@string/menu_commissions"
+    android:name="edu.cnm.deepdive.albuquirky.ui.commission.CommissionFragment"
+    tools:layout="@layout/fragment_commissions"/>
+
+  <fragment
+    android:id="@+id/nav_orders"
+    android:label="@string/menu_orders"
+    android:name="edu.cnm.deepdive.albuquirky.ui.orders.OrdersFragment"
+    tools:layout="@layout/fragment_orders"/>
+
+  <fragment
+    android:id="@+id/nav_browser"
+    android:label="@string/menu_browser"
+    android:name="edu.cnm.deepdive.albuquirky.ui.BrowserFragment"
+    tools:layout="@layout/fragment_browser"/>
 </navigation>

@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.albuquirky.ui.home;
+package edu.cnm.deepdive.albuquirky.ui.profile;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,7 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.albuquirky.R;
 
-public class HomeFragment extends Fragment {
+public class ProfileFragment extends Fragment {
 
   private HomeViewModel homeViewModel;
 
@@ -21,7 +21,7 @@ public class HomeFragment extends Fragment {
       ViewGroup container, Bundle savedInstanceState) {
     homeViewModel =
         new ViewModelProvider(this).get(HomeViewModel.class);
-    View root = inflater.inflate(R.layout.fragment_home, container, false);
+    View root = inflater.inflate(R.layout.fragment_profile, container, false);
     final TextView textView = root.findViewById(R.id.text_home);
     homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
       @Override
