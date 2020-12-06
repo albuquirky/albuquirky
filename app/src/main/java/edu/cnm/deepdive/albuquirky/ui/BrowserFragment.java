@@ -1,11 +1,14 @@
 package edu.cnm.deepdive.albuquirky.ui;
 
 import android.os.Bundle;
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import edu.cnm.deepdive.albuquirky.R;
+import edu.cnm.deepdive.albuquirky.databinding.FragmentBrowserBinding;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * A simple {@link Fragment} subclass. Use the {@link BrowserFragment#newInstance} factory method to
@@ -13,6 +16,7 @@ import edu.cnm.deepdive.albuquirky.R;
  */
 public class BrowserFragment extends Fragment {
 
+  private FragmentBrowserBinding binding;
   // TODO: Rename parameter arguments, choose names that match
   // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
   private static final String ARG_PARAM1 = "param1";
@@ -53,12 +57,14 @@ public class BrowserFragment extends Fragment {
     }
   }
 
-  @Override
-  public View onCreateView(LayoutInflater inflater, ViewGroup container,
+
+  public View onCreateView(@NonNull @NotNull LayoutInflater inflater,
+      ViewGroup container,
       Bundle savedInstanceState) {
-    // Inflate the layout for this fragment
-    return inflater.inflate(R.layout.fragment_browser, container, false);
+    binding = FragmentBrowserBinding.inflate(inflater, container, false);
+    binding.searchButton.setOnClickListener((v) ->
+        viewModel.search(binding.searchText.getText().toString().trim()));
+    return binding.getRoot();
+
   }
-
-
 }
