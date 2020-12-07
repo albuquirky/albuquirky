@@ -4,31 +4,29 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-
-import androidx.lifecycle.ViewModelProvider;
-import edu.cnm.deepdive.albuquirky.R;
+import edu.cnm.deepdive.albuquirky.adapter.CarouselAdapter;
+import edu.cnm.deepdive.albuquirky.databinding.FragmentProductsBinding;
+import java.util.ArrayList;
 
 public class ProductsFragment extends Fragment {
 
-  private GalleryViewModel galleryViewModel;
+  private FragmentProductsBinding binding;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    galleryViewModel =
-        new ViewModelProvider(this).get(GalleryViewModel.class);
-    View root = inflater.inflate(R.layout.fragment_products, container, false);
-    final TextView textView = root.findViewById(R.id.text_gallery);
-    galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-      @Override
-      public void onChanged(@Nullable String s) {
-        textView.setText(s);
-      }
-    });
-    return root;
+    binding = FragmentProductsBinding.inflate(inflater);
+    // TODO Get array of image objects.
+    ArrayList<Fragment> fragments = new ArrayList<>();
+    for (/* Image image : images */) {
+      CarouselItemFragment fragment = CarouselItemFragment.getInstance(/* image */);
+      fragments.add(fragment);
+    }
+    CarouselAdapter adapter = new CarouselAdapter(getParentFragmentManager(), 1, fragments);
+    binding.productImageCarousel.setAdapter(adapter);
+    binding.productIndicator.setupWithViewPager(binding.productImageCarousel, true);
+    return binding.getRoot();
   }
+
 }
