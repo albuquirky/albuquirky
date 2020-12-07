@@ -11,8 +11,7 @@
     android:padding="25dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf=""
-    app:layout_constraintTop_toTopOf="parent"
-    android:background="FF00A">
+    app:layout_constraintTop_toTopOf="parent">
 
     <ImageView
       android:id="@+id/product_order_image"
