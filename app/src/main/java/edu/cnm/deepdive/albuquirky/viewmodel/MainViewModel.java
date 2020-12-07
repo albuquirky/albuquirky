@@ -14,14 +14,14 @@ public class MainViewModel extends AndroidViewModel {
     super(application);
     pending = new CompositeDisposable();
 
-
-  public void search(String keyword) {
-    pending.add(
-        mainRepository.search(keyword)
-            .subscribe(
-                results::postValue,
-                throwable::postValue
-            )
-    );
+    public void search (String keyword){
+      pending.add(
+          mainRepository.search(keyword)
+              .subscribe(
+                  results::postValue,
+                  throwable::postValue
+              )
+      );
+    }
   }
 }
