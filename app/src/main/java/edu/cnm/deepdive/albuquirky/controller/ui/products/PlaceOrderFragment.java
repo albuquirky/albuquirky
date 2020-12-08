@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.albuquirky.ui.orders;
+package edu.cnm.deepdive.albuquirky.controller.ui.products;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 import edu.cnm.deepdive.albuquirky.R;
 
 /**
- * A simple {@link Fragment} subclass. Use the {@link OrderDetailsFragment#newInstance} factory
- * method to create an instance of this fragment.
+ * A simple {@link Fragment} subclass. Use the {@link PlaceOrderFragment#newInstance} factory method
+ * to create an instance of this fragment.
  */
-public class OrderDetailsFragment extends Fragment {
+public class PlaceOrderFragment extends Fragment {
 
   // TODO: Rename parameter arguments, choose names that match
   // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,7 +22,7 @@ public class OrderDetailsFragment extends Fragment {
   private String mParam1;
   private String mParam2;
 
-  public OrderDetailsFragment() {
+  public PlaceOrderFragment() {
     // Required empty public constructor
   }
 
@@ -32,11 +32,11 @@ public class OrderDetailsFragment extends Fragment {
    *
    * @param param1 Parameter 1.
    * @param param2 Parameter 2.
-   * @return A new instance of fragment OrderDetailsFragment.
+   * @return A new instance of fragment PlaceOrderFragment.
    */
   // TODO: Rename and change types and number of parameters
-  public static OrderDetailsFragment newInstance(String param1, String param2) {
-    OrderDetailsFragment fragment = new OrderDetailsFragment();
+  public static PlaceOrderFragment newInstance(String param1, String param2) {
+    PlaceOrderFragment fragment = new PlaceOrderFragment();
     Bundle args = new Bundle();
     args.putString(ARG_PARAM1, param1);
     args.putString(ARG_PARAM2, param2);
@@ -57,6 +57,6 @@ public class OrderDetailsFragment extends Fragment {
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
     // Inflate the layout for this fragment
-    return inflater.inflate(R.layout.fragment_order_details, container, false);
+    return inflater.inflate(R.layout.fragment_place_order, container, false);
   }
 }

@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.albuquirky.ui.orders;
+package edu.cnm.deepdive.albuquirky.controller.ui.orders;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;

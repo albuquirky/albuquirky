@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.albuquirky.ui.commission;
+package edu.cnm.deepdive.albuquirky.controller.ui.profile;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,17 +13,17 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.albuquirky.R;
 
-public class CommissionFragment extends Fragment {
+public class ProfileFragment extends Fragment {
 
-  private SlideshowViewModel slideshowViewModel;
+  private HomeViewModel homeViewModel;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    slideshowViewModel =
-        new ViewModelProvider(this).get(SlideshowViewModel.class);
-    View root = inflater.inflate(R.layout.fragment_commissions, container, false);
-    final TextView textView = root.findViewById(R.id.text_slideshow);
-    slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+    homeViewModel =
+        new ViewModelProvider(this).get(HomeViewModel.class);
+    View root = inflater.inflate(R.layout.fragment_profile, container, false);
+    final TextView textView = root.findViewById(R.id.text_home);
+    homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
       @Override
       public void onChanged(@Nullable String s) {
         textView.setText(s);

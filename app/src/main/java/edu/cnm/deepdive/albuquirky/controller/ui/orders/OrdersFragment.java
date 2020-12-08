@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.albuquirky.ui.orders;
+package edu.cnm.deepdive.albuquirky.controller.ui.orders;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.albuquirky.R;
-import edu.cnm.deepdive.albuquirky.ui.products.GalleryViewModel;
+import edu.cnm.deepdive.albuquirky.controller.ui.products.GalleryViewModel;
 
 public class OrdersFragment extends Fragment {
 

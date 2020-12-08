@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.albuquirky.ui.profile;
+package edu.cnm.deepdive.albuquirky.controller.ui.products;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,17 +13,17 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.albuquirky.R;
 
-public class ProfileFragment extends Fragment {
+public class ProductsFragment extends Fragment {
 
-  private HomeViewModel homeViewModel;
+  private GalleryViewModel galleryViewModel;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    homeViewModel =
-        new ViewModelProvider(this).get(HomeViewModel.class);
-    View root = inflater.inflate(R.layout.fragment_profile, container, false);
-    final TextView textView = root.findViewById(R.id.text_home);
-    homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+    galleryViewModel =
+        new ViewModelProvider(this).get(GalleryViewModel.class);
+    View root = inflater.inflate(R.layout.fragment_products, container, false);
+    final TextView textView = root.findViewById(R.id.text_gallery);
+    galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
       @Override
       public void onChanged(@Nullable String s) {
         textView.setText(s);
