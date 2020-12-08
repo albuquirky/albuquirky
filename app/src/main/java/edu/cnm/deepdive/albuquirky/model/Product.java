@@ -2,6 +2,7 @@ package edu.cnm.deepdive.albuquirky.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import java.util.Date;
 
 public class Product {
 
@@ -22,11 +23,19 @@ public class Product {
   private int stock;
 
   @Expose
-  private int postedDate;
+  private Date postedDate;
 
   @Expose
   @SerializedName("profile")
-  private int seller;
+  private Profile seller;
+
+  public long getId() {
+    return id;
+  }
+
+  public void setId(long id) {
+    this.id = id;
+  }
 
   public String getName() {
     return name;
@@ -60,19 +69,19 @@ public class Product {
     this.stock = stock;
   }
 
-  public int getPostedDate() {
+  public Date getPostedDate() {
     return postedDate;
   }
 
-  public void setPostedDate(int postedDate) {
+  public void setPostedDate(Date postedDate) {
     this.postedDate = postedDate;
   }
 
-  public int getSeller() {
+  public Profile getSeller() {
     return seller;
   }
 
-  public void setSeller(int seller) {
+  public void setSeller(Profile seller) {
     this.seller = seller;
   }
 

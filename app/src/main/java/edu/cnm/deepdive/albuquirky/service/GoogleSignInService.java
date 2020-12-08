@@ -54,6 +54,13 @@ public class GoogleSignInService {
     );
   }
 
+  public Single<String> refreshBearerToken() {
+    //noinspection ReactiveStreamsNullableInLambdaInTransform
+    return refresh()
+        .map(GoogleSignInAccount::getIdToken)
+        .map((token) -> String.format("Bearer %s", token));
+  }
+
   public void startSignIn(Activity activity, int requestCode) {
     account = null;
     Intent intent = client.getSignInIntent();
@@ -87,5 +94,7 @@ public class GoogleSignInService {
   private static class InstanceHolder {
 
     private static final GoogleSignInService INSTANCE = new GoogleSignInService();
+
   }
+
 }

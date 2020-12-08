@@ -13,6 +13,9 @@ public class User {
   @Expose
   private String username;
 
+  @Expose
+  private String address;
+
   public long getExternalId() {
     return externalId;
   }
@@ -28,4 +31,13 @@ public class User {
   public void setUsername(String username) {
     this.username = username;
   }
+
+  public String getAddress() {
+    return address;
+  }
+
+  public void setAddress(String address) {
+    this.address = address;
+  }
+
 }

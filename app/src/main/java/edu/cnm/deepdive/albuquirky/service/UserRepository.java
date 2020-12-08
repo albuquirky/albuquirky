@@ -29,4 +29,5 @@ public class UserRepository {
   private String getBearerToken(GoogleSignInAccount account) {
     return String.format("Bearer %s", account.getIdToken());
   }
+
 }
