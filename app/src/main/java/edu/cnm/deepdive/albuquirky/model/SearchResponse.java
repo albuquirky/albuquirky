@@ -1,8 +1,10 @@
 package edu.cnm.deepdive.albuquirky.model;
 
 import com.google.gson.annotations.Expose;
+import java.util.List;
 
 public class SearchResponse {
+
   @Expose
   private SearchData data;
 
@@ -17,12 +19,27 @@ public class SearchResponse {
   public static class SearchData {
 
     @Expose
-    private String id;
+    private List<ProdDto> products;
 
-    @Expose
-    private String product;
+    public List<ProdDto> getProducts() {
+      return products;
+    }
 
-    @Expose
-    private String productDescription;
+    public void setProducts(
+        List<ProdDto> products) {
+      this.products = products;
+    }
+
+    public static class ProdDto {
+
+      @Expose
+      private String id;
+
+      @Expose
+      private String product;
+
+      @Expose
+      private String productDescription;
+    }
   }
 }
