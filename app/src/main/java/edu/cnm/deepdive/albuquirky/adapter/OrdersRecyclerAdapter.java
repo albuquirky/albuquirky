@@ -57,9 +57,9 @@ public class OrdersRecyclerAdapter extends RecyclerView.Adapter<Holder> {
 
     private void bind(int position) {
       Order order = orders.get(position);
-      Product
-      binding.itemCost.setText(getItemCost);
-      binding.itemNameOrderId.setText(Product..);
+//      Product
+//      binding.itemCost.setText(getItemCost);
+//      binding.itemNameOrderId.setText(Product..);
 //      binding.itemNameOrderId.setText(order.getOrderId);
 //      binding.orderDatePlaced.setText(order.getPlacedDate());
 //      binding.itemCost.setText();

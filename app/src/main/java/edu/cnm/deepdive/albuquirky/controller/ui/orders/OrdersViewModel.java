@@ -1,16 +1,16 @@
-package edu.cnm.deepdive.albuquirky.controller.ui.commission;
+package edu.cnm.deepdive.albuquirky.controller.ui.orders;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SlideshowViewModel extends ViewModel {
+public class OrdersViewModel extends ViewModel {
 
   private MutableLiveData<String> mText;
 
-  public SlideshowViewModel() {
+  public OrdersViewModel() {
     mText = new MutableLiveData<>();
-    mText.setValue("This is slideshow fragment");
+    mText.setValue("This is gallery fragment");
   }
 
   public LiveData<String> getText() {

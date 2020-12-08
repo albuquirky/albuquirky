@@ -12,23 +12,16 @@ import androidx.lifecycle.Observer;
 
 import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.albuquirky.R;
+import edu.cnm.deepdive.albuquirky.databinding.FragmentCommissionsBinding;
 
 public class CommissionFragment extends Fragment {
 
-  private SlideshowViewModel slideshowViewModel;
+  private FragmentCommissionsBinding binding;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    slideshowViewModel =
-        new ViewModelProvider(this).get(SlideshowViewModel.class);
-    View root = inflater.inflate(R.layout.fragment_commissions, container, false);
-    final TextView textView = root.findViewById(R.id.text_slideshow);
-    slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-      @Override
-      public void onChanged(@Nullable String s) {
-        textView.setText(s);
-      }
-    });
-    return root;
+    binding = FragmentCommissionsBinding.inflate(inflater, container, false);
+    return binding.getRoot();
   }
+
 }

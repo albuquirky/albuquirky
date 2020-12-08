@@ -1,23 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
   tools:context=".controller.ui.products.ProductsFragment">
 
-  <TextView
-    android:id="@+id/text_gallery"
+  <androidx.viewpager.widget.ViewPager
+    android:id="@+id/product_image_carousel"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/product_details"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+  <com.google.android.material.tabs.TabLayout
+    android:id="@+id/product_indicator"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
-    android:textAlignment="center"
-    android:textSize="20sp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/product_image_carousel"
+    app:layout_constraintBottom_toTopOf="@id/product_details"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"/>
+    app:layout_constraintEnd_toEndOf="parent"
+    app:tabBackground="@drawable/tab_selector"
+    app:tabGravity="center"
+    app:tabIndicatorHeight="0dp"
+    app:tabMaxWidth="10dp"/>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/product_details"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintTop_toBottomOf="@id/product_indicator"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/product_details_guideline"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintGuide_percent="0.55"
+      android:orientation="vertical"/>
+
+    <TextView
+      android:id="@+id/product_details_price"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/half_margin"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/product_details_guideline"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/product_details_stock"
+      android:textSize="35sp"
+      android:textStyle="bold"
+      tools:text="$XXX.XX"/>
+
+    <TextView
+      android:id="@+id/product_details_stock"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="8dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="@id/product_details_guideline"
+      app:layout_constraintTop_toBottomOf="@id/product_details_price"
+      app:layout_constraintBottom_toBottomOf="parent"
+      android:textSize="20sp"
+      tools:text="Only XX left!"/>
+
+    <Button
+      android:id="@+id/products_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toEndOf="@id/product_details_guideline"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:textSize="35sp"
+      tools:text="EDIT"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
