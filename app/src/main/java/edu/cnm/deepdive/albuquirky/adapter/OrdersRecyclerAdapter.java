@@ -7,7 +7,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import edu.cnm.deepdive.albuquirky.adapter.OrdersRecyclerAdapter.Holder;
 import edu.cnm.deepdive.albuquirky.databinding.OrdersBinding;
+import edu.cnm.deepdive.albuquirky.model.Image;
 import edu.cnm.deepdive.albuquirky.model.Order;
+import edu.cnm.deepdive.albuquirky.model.ProductOnOrder;
 import java.util.ArrayList;
 import java.util.List;
 import org.jetbrains.annotations.NotNull;
@@ -17,6 +19,7 @@ public class OrdersRecyclerAdapter extends RecyclerView.Adapter<Holder> {
   private final Context context;
   private final List<Order> orders;
   private final LayoutInflater inflater;
+//  private final Image image;
 
   public OrdersRecyclerAdapter(Context context) {
     this.context = context;
@@ -31,7 +34,8 @@ public class OrdersRecyclerAdapter extends RecyclerView.Adapter<Holder> {
   @NonNull
   @Override
   public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-    return null;
+    OrdersBinding binding = OrdersBinding.inflate(inflater, parent, false);
+    return new Holder(binding);
   }
 
   @Override
@@ -44,18 +48,21 @@ public class OrdersRecyclerAdapter extends RecyclerView.Adapter<Holder> {
     return orders.size();
   }
 
-  public class Holder extends RecyclerView.ViewHolder {
+  class Holder extends RecyclerView.ViewHolder {
 
     private final OrdersBinding binding;
 
-    public Holder(@NonNull OrdersBinding binding){
+    public Holder(@NonNull OrdersBinding binding) {
       super(binding.getRoot());
       this.binding = binding;
     }
 
-    private void bind(int position){
+    private void bind(int position) {
       Order order = orders.get(position);
-      binding.
+      binding.itemNameOrderId.setText(order.getOrderId);
+      binding.orderDatePlaced.setText(order.getPlacedDate());
+      binding.itemCost.setText();
+      binding.productOrderImage.;
     }
   }
 }

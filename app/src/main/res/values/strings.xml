@@ -17,5 +17,6 @@
   <string name="menu_orders">Your Orders</string>
   <string name="menu_browser">Browse</string>
   <string name="order_fulfilled">Order fulfilled</string>
+  <string name="product_image">Product Image</string>
 
 </resources>
