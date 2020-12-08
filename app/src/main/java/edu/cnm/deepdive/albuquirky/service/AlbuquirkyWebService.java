@@ -3,7 +3,6 @@ package edu.cnm.deepdive.albuquirky.service;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import edu.cnm.deepdive.albuquirky.BuildConfig;
-import edu.cnm.deepdive.albuquirky.model.SearchResponse;
 import edu.cnm.deepdive.albuquirky.model.User;
 import io.reactivex.Single;
 import okhttp3.OkHttpClient;
@@ -19,9 +18,6 @@ public interface AlbuquirkyWebService {
 
   @GET("profiles/me")
   Single<User> getProfile(@Header("Authorization") String bearerToken);
-
-  @GET("search")
-  Single<SearchResponse> search(@Header("Authorization")String authHeader);
 
   static AlbuquirkyWebService getInstance() {
     return InstanceHolder.INSTANCE;

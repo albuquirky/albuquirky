@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <LinearLayout
+    android:id="@id/order_number"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <TextView
+      android:id="@+id/order_number"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/half_margin"
+      android:textStyle="bold"
+      android:textSize="30sp"
+      android:textAlignment="center"
+      tools:text="Confirm Order"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/order_info_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="25dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/order_number"
+    android:orientation="horizontal">
+
+    <ImageView
+      android:id="@+id/product_order_image"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:contentDescription="@{image.id}"
+      android:src="@drawable/aq_image_placeholder"/>
+
+    <LinearLayout
+      android:id="@+id/order_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="15dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/product_name"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="25sp"
+        tools:text="Wallet"/>
+
+      <TextView
+        android:id="@+id/order_date_placed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/order_text_size"
+        tools:text="12/3/20"/>
+
+      <TextView
+        android:id="@+id/item_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/order_text_size"
+        tools:text="$44.99"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/order_tax"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_marginStart="15dp"
+      android:paddingTop="@dimen/half_static_spacing">
+
+      <TextView
+        android:id="@+id/item_cost_tax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/order_text_size"
+        tools:text="Taxes: $2.54"/>
+      <TextView
+        android:id="@+id/item_cost_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/order_text_size"
+        android:textStyle="bold"
+        tools:text="Total: $47.53"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/order_fulfillment_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintTop_toBottomOf="@id/order_info_container"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:padding="@dimen/half_margin">
+
+    <CheckBox
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Fulfilled"
+      android:textStyle="bold"
+      android:textSize="30sp"/>
+
+    <TextView
+      android:id="@+id/fulfill_type"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Fulfillment Type:"
+      android:textSize="25sp"
+      android:textStyle="bold"
+      tools:text="Fulfillment Type:"/>
+
+      <TextView
+        android:id="@+id/type_of_fulfillment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TypeOfFulfillment"
+        android:textSize="@dimen/order_text_size"
+        tools:text="Delivery"/>
+    <TextView
+      android:id="@+id/fulfill_date"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Fulfillment Type:"
+      android:textSize="25sp"
+      android:textStyle="bold"
+      tools:text="Fulfillment Date:"/>
+
+    <TextView
+      android:id="@+id/date_of_fulfillment"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="DateOfFulfillment"
+      android:textSize="@dimen/order_text_size"
+      tools:text="12/11/20"/>
+
+    <TextView
+      android:id="@+id/fulfill_address"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Fulfillment Address:"
+      android:textSize="25sp"
+      android:textStyle="bold"
+      tools:text="Fulfillment Address:"/>
+
+    <TextView
+      android:id="@+id/address_of_fulfillment"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Address"
+      android:textSize="@dimen/order_text_size"
+      tools:text="999 Central Ave NW. Albuquerque, NM 87123"/>
+
+
+</LinearLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+

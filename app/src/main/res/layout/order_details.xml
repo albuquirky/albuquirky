@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+ <LinearLayout
+   android:id="@id/order_number"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:orientation="vertical"
+   app:layout_constraintTop_toTopOf="parent"
+   app:layout_constraintStart_toStartOf="parent"
+   app:layout_constraintEnd_toEndOf="parent"
+   >
+
+  <TextView
+    android:id="@+id/order_number"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/half_margin"
+    android:textStyle="bold"
+    android:textSize="30sp"
+    android:textAlignment="center"
+    tools:text="Order #XXXX"/>
+ </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/order_info_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="25dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/order_number"
+    android:orientation="horizontal">
+
+  <ImageView
+    android:id="@+id/product_order_image"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:contentDescription="@{image.id}"
+    android:src="@drawable/aq_image_placeholder"
+    />
+
+  <LinearLayout
+    android:id="@+id/order_info"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:orientation="vertical">
+
+    <TextView
+      android:id="@+id/product_name"
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text=""
+      android:textSize="25sp"
+      tools:text="Wallet"/>
+
+    <TextView
+      android:id="@+id/order_date_placed"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/order_text_size"
+      tools:text="12/3/20"/>
+
+    <TextView
+      android:id="@+id/item_cost"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/order_text_size"
+      tools:text="$44.99"/>
+
+  </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_marginStart="15dp"
+      android:paddingTop="@dimen/half_static_spacing">
+
+    <TextView
+      android:id="@+id/item_cost_tax"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/order_text_size"
+      tools:text="Taxes: $2.54"/>
+      <TextView
+        android:id="@+id/item_cost_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/order_text_size"
+        android:textStyle="bold"
+        tools:text="Total: $47.53"/>
+
+
+    </LinearLayout>
+
+
+  </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintTop_toBottomOf="@id/order_info_container"
+      app:layout_constraintStart_toStartOf="parent"
+      android:padding="@dimen/half_margin"
+      android:textAlignment="center">
+
+      <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UserName"
+        android:textSize="@dimen/order_text_size"
+        tools:text="FirstName LastName"/>
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textSize="@dimen/order_text_size"
+        tools:text="999 Central Ave NW. Albuquerque, NM 87123"/>
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UserPhoneNum"
+        android:textSize="@dimen/order_text_size"
+        tools:text="(505) 505-5050"/>
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UserEmail"
+        android:textSize="@dimen/order_text_size"
+        tools:text="email@address.com"/>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
