@@ -7,12 +7,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import edu.cnm.deepdive.albuquirky.adapter.OrdersRecyclerAdapter.Holder;
 import edu.cnm.deepdive.albuquirky.databinding.OrdersBinding;
-import edu.cnm.deepdive.albuquirky.model.Image;
 import edu.cnm.deepdive.albuquirky.model.Order;
-import edu.cnm.deepdive.albuquirky.model.ProductOnOrder;
+import edu.cnm.deepdive.albuquirky.model.Product;
 import java.util.ArrayList;
 import java.util.List;
-import org.jetbrains.annotations.NotNull;
 
 public class OrdersRecyclerAdapter extends RecyclerView.Adapter<Holder> {
 
@@ -59,10 +57,13 @@ public class OrdersRecyclerAdapter extends RecyclerView.Adapter<Holder> {
 
     private void bind(int position) {
       Order order = orders.get(position);
-      binding.itemNameOrderId.setText(order.getOrderId);
-      binding.orderDatePlaced.setText(order.getPlacedDate());
-      binding.itemCost.setText();
-      binding.productOrderImage.;
+      Product
+      binding.itemCost.setText(getItemCost);
+      binding.itemNameOrderId.setText(Product..);
+//      binding.itemNameOrderId.setText(order.getOrderId);
+//      binding.orderDatePlaced.setText(order.getPlacedDate());
+//      binding.itemCost.setText();
+//      binding.productOrderImage.;
     }
   }
 }
