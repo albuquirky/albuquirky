@@ -36,4 +36,10 @@ public class ProductRepository {
         .flatMap((token) -> webService.postProduct(token, product));
   }
 
+  public Single<Product> retrieveProduct(long id) {
+    return signInService.refreshBearerToken()
+        .observeOn(Schedulers.io())
+        .flatMap((token) -> webService.getProductById(token, id));
+  }
+
 }
