@@ -7,27 +7,523 @@
   android:layout_height="match_parent"
   tools:context=".controller.ui.products.ProductsFragment">
 
-  <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/orders_list"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:clickable="true"
-    android:focusable="true"
-    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
-
-  <TextView
-    android:id="@+id/text_gallery"
+  <LinearLayout
+    android:id="@+id/order_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
-    android:textAlignment="center"
-    android:textSize="20sp"
-    app:layout_constraintBottom_toBottomOf="parent"
+    android:padding="20dp"
+    android:layout_margin="8dp"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"/>
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+      android:id="@+id/product_order_image"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:contentDescription="@string/product_image"
+      android:src="@drawable/aq_image_placeholder"/>
+
+    <LinearLayout
+      android:id="@+id/order_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="15dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/item_name_order_id"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        tools:text="Order #2442SD"/>
+
+      <TextView
+        android:id="@+id/order_date_placed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="12/3/20"/>
+
+      <TextView
+        android:id="@+id/item_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="$44.99"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/order_fulfilled_box"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_margin="15dp">
+
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="10dp"/>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/order_fulfilled"
+        android:textAlignment="center"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/item2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:layout_margin="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/order_container"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+      android:id="@+id/item2_image"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:contentDescription="@string/product_image"
+      android:src="@drawable/aq_image_placeholder"/>
+
+    <LinearLayout
+      android:id="@+id/order2_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="15dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/item2_name"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        tools:text="Order #2442SD"/>
+
+      <TextView
+        android:id="@+id/order2_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="12/3/20"/>
+
+      <TextView
+        android:id="@+id/item2_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="$44.99"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/order2_fulfilled_box"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_margin="15dp">
+
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="10dp"/>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/order_fulfilled"
+        android:textAlignment="center"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/item3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:layout_margin="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/item2"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+      android:id="@+id/item3_image"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:contentDescription="@string/product_image"
+      android:src="@drawable/aq_image_placeholder"/>
+
+    <LinearLayout
+      android:id="@+id/order3_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="15dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/item3_name"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        tools:text="Order #2442SD"/>
+
+      <TextView
+        android:id="@+id/order3_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="12/3/20"/>
+
+      <TextView
+        android:id="@+id/item3_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="$44.99"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/order3_fulfilled_box"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_margin="15dp">
+
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="10dp"/>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/order_fulfilled"
+        android:textAlignment="center"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/item4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:layout_margin="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/item3"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+      android:id="@+id/item4_image"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:contentDescription="@string/product_image"
+      android:src="@drawable/aq_image_placeholder"/>
+
+    <LinearLayout
+      android:id="@+id/order4_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="15dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/item4_name"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        tools:text="Order #2442SD"/>
+
+      <TextView
+        android:id="@+id/order4_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="12/3/20"/>
+
+      <TextView
+        android:id="@+id/item4_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="$44.99"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/order4_fulfilled_box"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_margin="15dp">
+
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="10dp"/>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/order_fulfilled"
+        android:textAlignment="center"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/item5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:layout_margin="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/item4"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+      android:id="@+id/item5_image"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:contentDescription="@string/product_image"
+      android:src="@drawable/aq_image_placeholder"/>
+
+    <LinearLayout
+      android:id="@+id/order5_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="15dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/item5_name"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        tools:text="Order #2442SD"/>
+
+      <TextView
+        android:id="@+id/order5_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="12/3/20"/>
+
+      <TextView
+        android:id="@+id/item5_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="$44.99"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/order5_fulfilled_box"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_margin="15dp">
+
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="10dp"/>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/order_fulfilled"
+        android:textAlignment="center"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/item6"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:layout_margin="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/item5"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+      android:id="@+id/item6_image"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:contentDescription="@string/product_image"
+      android:src="@drawable/aq_image_placeholder"/>
+
+    <LinearLayout
+      android:id="@+id/order6_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="15dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/item6_name"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        tools:text="Order #2442SD"/>
+
+      <TextView
+        android:id="@+id/order6_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="12/3/20"/>
+
+      <TextView
+        android:id="@+id/item6_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="$44.99"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/order6_fulfilled_box"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_margin="15dp">
+
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="10dp"/>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/order_fulfilled"
+        android:textAlignment="center"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/item7"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:layout_margin="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/item6"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+      android:id="@+id/item7_image"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:contentDescription="@string/product_image"
+      android:src="@drawable/aq_image_placeholder"/>
+
+    <LinearLayout
+      android:id="@+id/order7_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="15dp"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/item7_name"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        tools:text="Order #2442SD"/>
+
+      <TextView
+        android:id="@+id/order7_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="12/3/20"/>
+
+      <TextView
+        android:id="@+id/item7_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="$44.99"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/order7_fulfilled_box"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_margin="15dp">
+
+      <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="10dp"/>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/order_fulfilled"
+        android:textAlignment="center"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
