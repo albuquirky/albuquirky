@@ -5,12 +5,13 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  tools:context=".controller.ui.products.ProductsFragment">
+  tools:context=".controller.ui.products.ProductFragment">
 
-  <androidx.viewpager.widget.ViewPager
+  <androidx.viewpager2.widget.ViewPager2
     android:id="@+id/product_image_carousel"
     android:layout_width="match_parent"
     android:layout_height="0dp"
+    android:orientation="horizontal"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toTopOf="@id/product_details"
     app:layout_constraintStart_toStartOf="parent"
