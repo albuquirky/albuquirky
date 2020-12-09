@@ -5,19 +5,157 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".controller.ui.profile.ProfileFragment">
+  tools:context=".ui.profile.ProfileFragment">
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/vertical_guideline_35"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintGuide_percent="0.35"
+    android:orientation="vertical"/>
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/horizontal_guideline_30"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintGuide_percent="0.3"
+    android:orientation="horizontal"/>
+
+  <ImageView
+    android:id="@+id/profile_picture"
+    android:src="@drawable/user_default"
+    android:contentDescription="Profile Picture"
+    android:padding="8dp"
+    android:layout_width="0dp"
+    android:layout_height="140dp"
+    android:maxWidth="@dimen/activity_vertical_margin"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/vertical_guideline_35"/>
 
   <TextView
-    android:id="@+id/text_home"
-    android:layout_width="match_parent"
+    android:id="@+id/username"
+    android:text="Username :"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="8dp"
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
-    android:textAlignment="center"
-    android:textSize="20sp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintStart_toEndOf="@id/vertical_guideline_35"
     app:layout_constraintTop_toTopOf="parent"/>
+
+  <EditText
+    android:id="@+id/input_username"
+    android:autofillHints="Edit Username"
+    android:hint="User Picture"
+    android:inputType="text"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_width="0dp"
+    android:layout_height="20dp"
+    app:layout_constraintStart_toEndOf="@id/username"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/input_password"/>
+
+  <TextView
+    android:id="@+id/password"
+    android:text="Password :"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintStart_toEndOf="@id/vertical_guideline_35"
+    app:layout_constraintTop_toBottomOf="@id/username"/>
+
+  <EditText
+    android:id="@+id/input_password"
+    android:autofillHints="Edit Password"
+    android:hint="User Password"
+    android:inputType="textPassword"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_width="0dp"
+    android:layout_height="20dp"
+    app:layout_constraintStart_toEndOf="@id/password"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/input_username"
+    app:layout_constraintBottom_toTopOf="@id/input_email"/>
+
+  <TextView
+    android:id="@+id/email"
+    android:text="Email :"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintStart_toEndOf="@id/vertical_guideline_35"
+    app:layout_constraintTop_toBottomOf="@id/password"/>
+
+  <EditText
+    android:id="@+id/input_email"
+    android:autofillHints="Edit Email"
+    android:hint="User Email"
+    android:inputType="textEmailAddress"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_width="0dp"
+    android:layout_height="20dp"
+    app:layout_constraintStart_toEndOf="@id/email"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/input_password"/>
+
+  <TextView
+    android:id="@+id/address"
+    android:text="Address :"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintStart_toEndOf="@id/vertical_guideline_35"
+    app:layout_constraintTop_toBottomOf="@id/email"/>
+
+  <EditText
+    android:id="@+id/input_address"
+    android:autofillHints="Edit Address"
+    android:hint="User Address"
+    android:inputType="textPostalAddress"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_width="0dp"
+    android:layout_height="20dp"
+    app:layout_constraintStart_toEndOf="@id/address"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/input_email"/>
+
+  <Button
+    android:id="@+id/upload_profile_image"
+    android:text="Upload Image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/vertical_guideline_35"
+    app:layout_constraintTop_toBottomOf="@id/address"
+    app:layout_constraintBottom_toTopOf="@id/horizontal_guideline_30"/>
+
+  <Button
+    android:id="@+id/commission_this_artist"
+    android:text="Update"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintWidth_percent="0.5"
+    android:padding="8dp"
+    app:layout_constraintStart_toStartOf="@id/vertical_guideline_35"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/address"
+    app:layout_constraintBottom_toTopOf="@id/horizontal_guideline_30"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
