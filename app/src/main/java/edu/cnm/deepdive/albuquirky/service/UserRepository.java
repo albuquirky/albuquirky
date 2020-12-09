@@ -2,7 +2,8 @@ package edu.cnm.deepdive.albuquirky.service;
 
 import android.content.Context;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import edu.cnm.deepdive.albuquirky.model.User;
+import edu.cnm.deepdive.albuquirky.model.Profile;
+import io.reactivex.Completable;
 import io.reactivex.Single;
 import io.reactivex.schedulers.Schedulers;
 
@@ -19,15 +20,22 @@ public class UserRepository {
     signInService = GoogleSignInService.getInstance();
   }
 
-  public Single<User> getProfileFromServer() {
-    return signInService.refresh()
+  public Single<Profile> getProfileFromServer() {
+    return signInService.refreshBearerToken()
         .observeOn(Schedulers.io())
-        .flatMap((account) -> webService.getProfile(getBearerToken(account)));
+        .flatMap(webService::getProfile);
     // TODO Add additional logic for persistence if appropriate.
   }
 
-  private String getBearerToken(GoogleSignInAccount account) {
-    return String.format("Bearer %s", account.getIdToken());
+  public Single<Profile> save(Profile profile) {
+    return signInService.refreshBearerToken()
+        .observeOn(Schedulers.io())
+        .flatMap((token) ->
+            webService.putUsername(token, profile.getUsername())
+                .flatMap((username) -> webService.putAddress(token, profile.getAddress()))
+        )
+        .map((address) -> profile);
   }
+
 
 }

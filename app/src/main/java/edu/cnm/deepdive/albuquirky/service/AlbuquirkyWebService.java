@@ -7,6 +7,7 @@ import edu.cnm.deepdive.albuquirky.model.Commission;
 import edu.cnm.deepdive.albuquirky.model.Image;
 import edu.cnm.deepdive.albuquirky.model.Order;
 import edu.cnm.deepdive.albuquirky.model.Product;
+import edu.cnm.deepdive.albuquirky.model.Profile;
 import edu.cnm.deepdive.albuquirky.model.User;
 import io.reactivex.Single;
 import java.util.List;
@@ -27,17 +28,17 @@ import retrofit2.http.Path;
 public interface AlbuquirkyWebService {
 
   @GET("profiles/me")
-  Single<User> getProfile(@Header("Authorization") String bearerToken);
+  Single<Profile> getProfile(@Header("Authorization") String bearerToken);
 
   @GET("profiles/{profileId}")
-  Single<User> getProfileById(
+  Single<Profile> getProfileById(
       @Header("Authorization") String bearerToken, @Path("profileId") long id);
 
   @GET("profiles/me/username")
   Single<String> getUsername(@Header("Authorization") String bearerToken);
 
   @PUT("profiles/me/username")
-  // TODO Write username put.
+  Single<String> putUsername(@Header("Authorization") String bearerToken, @Body String username);
 
   @GET("profiles/me/image")
   Single<String> getProfileImage(@Header("Authorization") String bearerToken);
@@ -49,7 +50,7 @@ public interface AlbuquirkyWebService {
   Single<String> getAddress(@Header("Authorization") String bearerToken);
 
   @PUT("profiles/me/address")
-  // TODO Write address put.
+  Single<String> putAddress(@Header("Authorization") String bearerToken, @Body String address);
 
   @GET("orders/user-orders")
   Single<List<Order>> getUserOrders(@Header("Authorization") String bearerToken);

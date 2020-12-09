@@ -15,10 +15,10 @@
     android:orientation="vertical"/>
 
   <androidx.constraintlayout.widget.Guideline
-    android:id="@+id/horizontal_guideline_30"
+    android:id="@+id/horizontal_guideline_40"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:layout_constraintGuide_percent="0.3"
+    app:layout_constraintGuide_percent="0.4"
     android:orientation="horizontal"/>
 
   <ImageView
@@ -47,43 +47,15 @@
   <EditText
     android:id="@+id/input_username"
     android:autofillHints="Edit Username"
-    android:hint="User Picture"
+    android:hint="Username"
     android:inputType="text"
-    android:layout_marginTop="8dp"
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
     android:layout_width="0dp"
-    android:layout_height="20dp"
-    app:layout_constraintStart_toEndOf="@id/username"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toTopOf="@id/input_password"/>
-
-  <TextView
-    android:id="@+id/password"
-    android:text="Password :"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
+    android:layout_height="40dp"
     app:layout_constraintStart_toEndOf="@id/vertical_guideline_35"
-    app:layout_constraintTop_toBottomOf="@id/username"/>
-
-  <EditText
-    android:id="@+id/input_password"
-    android:autofillHints="Edit Password"
-    android:hint="User Password"
-    android:inputType="textPassword"
-    android:layout_marginTop="8dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
-    android:layout_width="0dp"
-    android:layout_height="20dp"
-    app:layout_constraintStart_toEndOf="@id/password"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/input_username"
-    app:layout_constraintBottom_toTopOf="@id/input_email"/>
+    app:layout_constraintTop_toBottomOf="@id/username"/>
 
   <TextView
     android:id="@+id/email"
@@ -94,21 +66,20 @@
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
     app:layout_constraintStart_toEndOf="@id/vertical_guideline_35"
-    app:layout_constraintTop_toBottomOf="@id/password"/>
+    app:layout_constraintTop_toBottomOf="@id/input_username"/>
 
   <EditText
     android:id="@+id/input_email"
     android:autofillHints="Edit Email"
-    android:hint="User Email"
+    android:hint="Contact Email"
     android:inputType="textEmailAddress"
-    android:layout_marginTop="8dp"
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
     android:layout_width="0dp"
-    android:layout_height="20dp"
-    app:layout_constraintStart_toEndOf="@id/email"
+    android:layout_height="40dp"
+    app:layout_constraintStart_toEndOf="@id/vertical_guideline_35"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/input_password"/>
+    app:layout_constraintTop_toBottomOf="@id/email"/>
 
   <TextView
     android:id="@+id/address"
@@ -119,21 +90,20 @@
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
     app:layout_constraintStart_toEndOf="@id/vertical_guideline_35"
-    app:layout_constraintTop_toBottomOf="@id/email"/>
+    app:layout_constraintTop_toBottomOf="@id/input_email"/>
 
   <EditText
     android:id="@+id/input_address"
     android:autofillHints="Edit Address"
     android:hint="User Address"
     android:inputType="textPostalAddress"
-    android:layout_marginTop="8dp"
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
     android:layout_width="0dp"
-    android:layout_height="20dp"
-    app:layout_constraintStart_toEndOf="@id/address"
+    android:layout_height="40dp"
+    app:layout_constraintStart_toEndOf="@id/vertical_guideline_35"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/input_email"/>
+    app:layout_constraintTop_toBottomOf="@id/address"/>
 
   <Button
     android:id="@+id/upload_profile_image"
@@ -143,11 +113,11 @@
     android:padding="8dp"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toStartOf="@id/vertical_guideline_35"
-    app:layout_constraintTop_toBottomOf="@id/address"
-    app:layout_constraintBottom_toTopOf="@id/horizontal_guideline_30"/>
+    app:layout_constraintTop_toBottomOf="@id/input_address"
+    app:layout_constraintBottom_toTopOf="@id/horizontal_guideline_40"/>
 
   <Button
-    android:id="@+id/commission_this_artist"
+    android:id="@+id/update_profile"
     android:text="Update"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
@@ -155,7 +125,7 @@
     android:padding="8dp"
     app:layout_constraintStart_toStartOf="@id/vertical_guideline_35"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/address"
-    app:layout_constraintBottom_toTopOf="@id/horizontal_guideline_30"/>
+    app:layout_constraintTop_toBottomOf="@id/input_address"
+    app:layout_constraintBottom_toTopOf="@id/horizontal_guideline_40"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

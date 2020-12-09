@@ -8,6 +8,7 @@ import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.OnLifecycleEvent;
+import edu.cnm.deepdive.albuquirky.model.Profile;
 import edu.cnm.deepdive.albuquirky.model.User;
 import edu.cnm.deepdive.albuquirky.service.GoogleSignInService;
 import edu.cnm.deepdive.albuquirky.service.UserRepository;
@@ -17,7 +18,7 @@ public class ProfileViewModel extends AndroidViewModel implements LifecycleObser
 
   private final GoogleSignInService signInService;
   private final UserRepository userRepository;
-  private final MutableLiveData<User> user;
+  private final MutableLiveData<Profile> profile;
   private final MutableLiveData<Throwable> throwable;
   private final CompositeDisposable pending;
 
@@ -26,34 +27,34 @@ public class ProfileViewModel extends AndroidViewModel implements LifecycleObser
     super(application);
     signInService = GoogleSignInService.getInstance();
     userRepository = new UserRepository(application);
-    user = new MutableLiveData<>();
+    profile = new MutableLiveData<>();
     throwable = new MutableLiveData<>();
     pending = new CompositeDisposable();
-    loadCurrentUser();
+    loadCurrentProfile();
   }
 
-  public LiveData<User> getUser() {
-    return user;
+  public LiveData<Profile> getUser() {
+    return profile;
   }
 
   public LiveData<Throwable> getThrowable() {
     return throwable;
   }
 
-  public void save(User user) {
+  public void save(Profile profile) {
     pending.add(
-        userRepository.save(user)
+        userRepository.save(profile)
             .subscribe(
-                () -> {},
+                this.profile::postValue,
                 throwable::postValue
             )
     );
   }
-  private void loadCurrentUser() {
+  private void loadCurrentProfile() {
     pending.add(
-        userRepository.getOrCreate(signInService.getAccount())
+        userRepository.getProfileFromServer()
             .subscribe(
-                user::postValue,
+                profile::postValue,
                 throwable::postValue
             )
     );

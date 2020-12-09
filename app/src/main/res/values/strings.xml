@@ -19,5 +19,6 @@
   <string name="order_fulfilled">Order fulfilled</string>
   <string name="product_image">Product Image</string>
   <string name="search_term_hint">Search Term</string>
+  <string name="profile_image_prompt">Select profile image</string>
 
 </resources>
