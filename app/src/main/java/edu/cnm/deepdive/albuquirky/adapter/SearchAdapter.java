@@ -13,12 +13,21 @@ import edu.cnm.deepdive.albuquirky.model.Product;
 import java.text.NumberFormat;
 import java.util.List;
 
+/**
+ * Adapter class for the {@link edu.cnm.deepdive.albuquirky.controller.ui.browse.BrowserFragment}.
+ */
 public class SearchAdapter extends ArrayAdapter<Product> {
 
   private final LayoutInflater inflater;
   private final NumberFormat formatter;
   private ItemSearchBinding binding;
 
+  /**
+   * The constructor sets a value for the required {@link LayoutInflater} and a {@link NumberFormat}
+   *  to properly format product prices as currency.
+   * @param context The application context.
+   * @param products A list of {@link Product} objects to display.
+   */
   public SearchAdapter(@NonNull Context context, @NonNull List<Product> products) {
     super(context, R.layout.item_search, products);
     inflater = LayoutInflater.from(context);

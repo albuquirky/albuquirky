@@ -25,6 +25,9 @@ import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
+/**
+ * This interface holds a list of endpoints to interact with the AlbuQuirky server.
+ */
 public interface AlbuquirkyWebService {
 
   @GET("profiles/me")
@@ -154,14 +157,24 @@ public interface AlbuquirkyWebService {
   Single<String> updateImageDescription(
       @Header("Authorization") String bearerToken, @Path("imageId") long id);
 
+  /**
+   * Method to supply an instance of the web service.
+   * @return The {@link AlbuquirkyWebService} instance.
+   */
   static AlbuquirkyWebService getInstance() {
     return InstanceHolder.INSTANCE;
   }
 
+  /**
+   * Nested class to create and hold an instance of the web service.
+   */
   class InstanceHolder {
 
     private static final AlbuquirkyWebService INSTANCE;
 
+    /**
+     * Generates and sets an instance of the web service.
+     */
     static {
       Gson gson = new GsonBuilder()
           .excludeFieldsWithoutExposeAnnotation()
