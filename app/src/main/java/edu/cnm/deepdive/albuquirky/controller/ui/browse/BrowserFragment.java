@@ -1,6 +1,8 @@
-package edu.cnm.deepdive.albuquirky.controller.ui.browser;
-/*
+package edu.cnm.deepdive.albuquirky.controller.ui.browse;
+
 import android.os.Bundle;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -10,15 +12,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.lifecycle.ViewModelProvider;
+import edu.cnm.deepdive.albuquirky.adapter.SearchAdapter;
 import edu.cnm.deepdive.albuquirky.databinding.FragmentBrowserBinding;
-//import edu.cnm.deepdive.albuquirky.model.SearchResponse.SearchData.ProdDto;
-import edu.cnm.deepdive.albuquirky.viewmodel.MainViewModel;
+import edu.cnm.deepdive.albuquirky.model.Product;
+import edu.cnm.deepdive.albuquirky.model.SearchResponse.SearchData.ProdDto;
+import edu.cnm.deepdive.albuquirky.controller.MainViewModel;
 import org.jetbrains.annotations.NotNull;
-*/
-public class BrowserFragment /*extends Fragment */{/*
+
+public class BrowserFragment extends Fragment {
 
   private MainViewModel viewModel;
-  private FragmentBrowserBinding binding;*/
+  private FragmentBrowserBinding binding;
+
 
   /**
    * This method enables and develops the search function through the click of the search button.
@@ -28,12 +33,16 @@ public class BrowserFragment /*extends Fragment */{/*
    * @param savedInstanceState
    * @return
    */
-  /*public View onCreateView(@NonNull @NotNull LayoutInflater inflater,
+  public View onCreateView(@NonNull @NotNull LayoutInflater inflater,
       ViewGroup container,
       Bundle savedInstanceState) {
     binding = FragmentBrowserBinding.inflate(inflater, container, false);
     binding.searchButton.setOnClickListener((v) ->
         viewModel.search(binding.searchText.getText().toString().trim()));
+    binding.searchResults.setOnItemClickListener((parent, view, position, id) -> {
+      Product product = (Product) parent.getItemAtPosition(position);
+      //TODO navigate to frag to display product
+    });
     return binding.getRoot();
   }
 
@@ -42,12 +51,13 @@ public class BrowserFragment /*extends Fragment */{/*
       @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     viewModel = new ViewModelProvider(this).get(MainViewModel.class);
-//    viewModel.getResults().observe(getViewLifecycleOwner(), (verses) -> {
-//      ArrayAdapter<ProdDto> adapter = new ArrayAdapter<>(getContext(),
-//          android.R.layout.simple_list_item_1, verses);
-//      binding.searchResults.setAdapter(adapter);
-//    });
+    getLifecycle().addObserver(viewModel);
+    viewModel.getResults().observe(getViewLifecycleOwner(), (products) -> {
+      SearchAdapter adapter = new SearchAdapter(getContext(), products);
+      binding.searchResults.setAdapter(adapter);
+    });
     viewModel.getThrowable().observe(getViewLifecycleOwner(), (throwable) ->
         Toast.makeText(getContext(), throwable.getMessage(), Toast.LENGTH_LONG).show());
-  }*/
+  }
+
 }
