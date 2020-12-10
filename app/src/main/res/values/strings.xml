@@ -20,5 +20,14 @@
   <string name="product_image">Product Image</string>
   <string name="search_term_hint">Search Term</string>
   <string name="profile_image_prompt">Select profile image</string>
+  <string name="profile_picture">Profile Picture</string>
+  <string name="profile_username">Username :</string>
+  <string name="hint_username">Username</string>
+  <string name="profile_email">Email :</string>
+  <string name="hint_contact_email">Contact Email</string>
+  <string name="profile_address">Address :</string>
+  <string name="hint_user_address">User Address</string>
+  <string name="button_upload_image">Upload Image</string>
+  <string name="button_update">Update</string>
 
 </resources>

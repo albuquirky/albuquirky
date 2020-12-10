@@ -9,11 +9,13 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.OnLifecycleEvent;
 import edu.cnm.deepdive.albuquirky.model.Profile;
-import edu.cnm.deepdive.albuquirky.model.User;
 import edu.cnm.deepdive.albuquirky.service.GoogleSignInService;
 import edu.cnm.deepdive.albuquirky.service.UserRepository;
 import io.reactivex.disposables.CompositeDisposable;
 
+/**
+ * Manaages UI for profile
+ */
 public class ProfileViewModel extends AndroidViewModel implements LifecycleObserver {
 
   private final GoogleSignInService signInService;
@@ -22,7 +24,11 @@ public class ProfileViewModel extends AndroidViewModel implements LifecycleObser
   private final MutableLiveData<Throwable> throwable;
   private final CompositeDisposable pending;
 
-
+  /**
+   * Initializes instance variables for ProfileViewModel class
+   *
+   * @param application
+   */
   public ProfileViewModel(@NonNull Application application) {
     super(application);
     signInService = GoogleSignInService.getInstance();
@@ -33,14 +39,29 @@ public class ProfileViewModel extends AndroidViewModel implements LifecycleObser
     loadCurrentProfile();
   }
 
+  /**
+   * Gets profile
+   *
+   * @return Profile - user object
+   */
   public LiveData<Profile> getUser() {
     return profile;
   }
 
+  /**
+   * Gets and returns errors and exceptions
+   *
+   * @return throwable - superclass of errors and exceptions
+   */
   public LiveData<Throwable> getThrowable() {
     return throwable;
   }
 
+  /**
+   * Saves profile object
+   *
+   * @param profile - user object
+   */
   public void save(Profile profile) {
     pending.add(
         userRepository.save(profile)
@@ -50,6 +71,7 @@ public class ProfileViewModel extends AndroidViewModel implements LifecycleObser
             )
     );
   }
+
   private void loadCurrentProfile() {
     pending.add(
         userRepository.getProfileFromServer()
