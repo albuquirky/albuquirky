@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.albuquirky.viewmodel;
+package edu.cnm.deepdive.albuquirky.controller;
 
 import android.app.Application;
 import androidx.annotation.NonNull;

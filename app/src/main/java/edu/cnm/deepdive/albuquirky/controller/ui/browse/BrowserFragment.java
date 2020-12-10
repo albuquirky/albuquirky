@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.albuquirky.ui;
+package edu.cnm.deepdive.albuquirky.controller.ui.browse;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -10,10 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.lifecycle.ViewModelProvider;
-import edu.cnm.deepdive.albuquirky.R;
 import edu.cnm.deepdive.albuquirky.databinding.FragmentBrowserBinding;
 import edu.cnm.deepdive.albuquirky.model.SearchResponse.SearchData.ProdDto;
-import edu.cnm.deepdive.albuquirky.viewmodel.MainViewModel;
+import edu.cnm.deepdive.albuquirky.controller.MainViewModel;
 import org.jetbrains.annotations.NotNull;
 
 public class BrowserFragment extends Fragment {

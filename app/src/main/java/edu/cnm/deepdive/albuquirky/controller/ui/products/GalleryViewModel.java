@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.albuquirky.ui.products;
+package edu.cnm.deepdive.albuquirky.controller.ui.products;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
