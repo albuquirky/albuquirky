@@ -8,7 +8,6 @@ import edu.cnm.deepdive.albuquirky.model.Image;
 import edu.cnm.deepdive.albuquirky.model.Order;
 import edu.cnm.deepdive.albuquirky.model.Product;
 import edu.cnm.deepdive.albuquirky.model.Profile;
-import edu.cnm.deepdive.albuquirky.model.User;
 import io.reactivex.Single;
 import java.util.List;
 import okhttp3.OkHttpClient;
@@ -24,6 +23,7 @@ import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface AlbuquirkyWebService {
 
@@ -90,8 +90,9 @@ public interface AlbuquirkyWebService {
   Single<String> updateCommissionRequest(
       @Header("Authorization") String bearerToken, @Path("commissionId") long id);
 
-  @GET("products/{keyword}")
-  Single<List<Product>> getProductsByKeyword(@Path("keyword") String keyword);
+  @GET("products")
+  Single<List<Product>> search(
+      @Header("Authorization") String authHeader, @Query("keyword") String keyword);
 
   @GET("products/{userId}")
   Single<List<Product>> getProductsBySeller(

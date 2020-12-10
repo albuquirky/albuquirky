@@ -40,13 +40,13 @@ public class ProductRepository {
   /**
    * Gets product by keyword
    *
-   * @param keyword - String
+   * @param query - String
    * @return Single<List<Product>>
    */
-  public Single<List<Product>> searchByKeyword(String keyword) {
+  public Single<List<Product>> search(String query) {
     return signInService.refreshBearerToken()
         .observeOn(Schedulers.io())
-        .flatMap((token) -> webService.getProductsByKeyword(keyword));
+        .flatMap((token) -> webService.search(token, query));
   }
 
   /**

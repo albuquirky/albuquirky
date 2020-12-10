@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.albuquirky.model;
 
+import androidx.annotation.NonNull;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import java.util.Date;
@@ -27,10 +28,6 @@ public class Product {
 
   @Expose
   private Date postedDate;
-
-  @Expose
-  @SerializedName("profile")
-  private Profile seller;
 
   /**
    * Gets product id
@@ -141,21 +138,14 @@ public class Product {
   }
 
   /**
-   * Gets profile of seller of product
-   *
-   * @return seller - Profile
+   * Override of {@code toString} to return the name and description contents for the
+   * {@link Product}.
+   * @return The String version of the {@link Product} name and description.
    */
-  public Profile getSeller() {
-    return seller;
-  }
-
-  /**
-   * Sets seller profile of product to parameter passed
-   *
-   * @param seller - Profile
-   */
-  public void setSeller(Profile seller) {
-    this.seller = seller;
+  @NonNull
+  @Override
+  public String toString() {
+    return name + "\n" + description;
   }
 
 }
