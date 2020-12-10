@@ -4,6 +4,9 @@ import android.app.Application;
 import com.facebook.stetho.Stetho;
 import edu.cnm.deepdive.albuquirky.service.GoogleSignInService;
 
+/**
+ * Application Class that uses Stetho and GoogleSignInService on creation
+ */
 public class AlbuquirkyApplication extends Application {
 
   @Override

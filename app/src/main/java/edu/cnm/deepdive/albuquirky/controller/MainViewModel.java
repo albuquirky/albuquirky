@@ -10,6 +10,10 @@ import edu.cnm.deepdive.albuquirky.service.ProductRepository;
 import io.reactivex.disposables.CompositeDisposable;
 import java.util.List;
 */
+
+/**
+ * ViewModel not currently being used
+ */
 public class MainViewModel /*extends AndroidViewModel*/ {/*
   private final ProductRepository productRepository;
   private final MutableLiveData<List<ProdDto>> results;

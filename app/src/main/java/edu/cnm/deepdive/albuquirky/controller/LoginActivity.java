@@ -14,6 +14,9 @@ import edu.cnm.deepdive.albuquirky.databinding.ActivityLoginBinding;
 import edu.cnm.deepdive.albuquirky.service.GoogleSignInService;
 //import edu.cnm.deepdive.albuquirky.service.UserRepository;
 
+/**
+ * Activity to log in using GoogleSignInServices
+ */
 public class LoginActivity extends AppCompatActivity {
 
   private static final int LOGIN_REQUEST_CODE = 1000;

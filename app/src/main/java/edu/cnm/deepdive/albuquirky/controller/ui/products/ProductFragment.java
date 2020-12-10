@@ -15,11 +15,22 @@ import edu.cnm.deepdive.albuquirky.databinding.FragmentProductBinding;
 import java.util.ArrayList;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Displays the product_fragment layout for a list of products in a carousel.
+ */
 public class ProductFragment extends Fragment {
 
   private FragmentProductBinding binding;
   private ProductViewModel viewModel;
 
+  /**
+   * Initial display of list of images of products
+   *
+   * @param inflater - service to display layout
+   * @param container - view to hold other views to display
+   * @param savedInstanceState - stores data to pass to activity
+   * @return binding.getRoot - View to display
+   */
   public View onCreateView(
       @NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     binding = FragmentProductBinding.inflate(inflater);

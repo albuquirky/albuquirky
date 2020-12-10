@@ -14,7 +14,7 @@ import edu.cnm.deepdive.albuquirky.service.UserRepository;
 import io.reactivex.disposables.CompositeDisposable;
 
 /**
- * Manaages UI for profile
+ * Manages UI for profile
  */
 public class ProfileViewModel extends AndroidViewModel implements LifecycleObserver {
 
@@ -25,9 +25,9 @@ public class ProfileViewModel extends AndroidViewModel implements LifecycleObser
   private final CompositeDisposable pending;
 
   /**
-   * Initializes instance variables for ProfileViewModel class
+   * Initializes instance variables for ProfileViewModel class and loads current profile
    *
-   * @param application
+   * @param application - base class that contains all other components
    */
   public ProfileViewModel(@NonNull Application application) {
     super(application);

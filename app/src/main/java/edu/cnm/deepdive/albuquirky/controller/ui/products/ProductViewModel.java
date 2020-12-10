@@ -14,6 +14,10 @@ import edu.cnm.deepdive.albuquirky.service.ProductRepository;
 import io.reactivex.disposables.CompositeDisposable;
 import java.util.List;
 
+/**
+ * Gets products and images, puts them into MutableLiveData or MutableLiveData lists
+ * and uses a ViewModel to display them
+ */
 public class ProductViewModel extends AndroidViewModel implements LifecycleObserver {
 
   private final ProductRepository productRepository;
@@ -24,6 +28,11 @@ public class ProductViewModel extends AndroidViewModel implements LifecycleObser
   private final MutableLiveData<Throwable> throwable;
   private final CompositeDisposable pending;
 
+  /**
+   * Constructor to initialize {@link ProductViewModel} class
+   *
+   * @param application
+   */
   public ProductViewModel(@NonNull Application application) {
     super(application);
     productRepository = new ProductRepository(application);
@@ -35,26 +44,56 @@ public class ProductViewModel extends AndroidViewModel implements LifecycleObser
     pending = new CompositeDisposable();
   }
 
+  /**
+   * Gets products
+   *
+   * @return products LiveData list of products
+   */
   public LiveData<List<Product>> getProducts() {
     return products;
   }
 
+  /**
+   * Gets a single product
+   *
+   * @return product - a single product
+   */
   public LiveData<Product> getProduct() {
     return product;
   }
 
+  /**
+   * Gets a LiveData list of images
+   *
+   * @return images - LiveData list of images
+   */
   public LiveData<List<Image>> getImages() {
     return images;
   }
 
+  /**
+   * Gets a single image
+   *
+   * @return image - single image
+   */
   public LiveData<Image> getImage() {
     return image;
   }
 
+  /**
+   * Gets a throwable
+   *
+   * @return throwable - LiveData throwablee
+   */
   public LiveData<Throwable> getThrowable() {
     return throwable;
   }
 
+  /**
+   * Gets product based on id of product, if it exists
+   *
+   * @param id - long id of product
+   */
   public void currentProduct(long id) {
     pending.add(
         productRepository.retrieveProduct(id)
