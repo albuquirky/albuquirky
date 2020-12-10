@@ -5,7 +5,7 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".controller.ui.products.ProductFragment">
+  tools:context=".controller.ui.orders.OrdersFragment">
 
   <LinearLayout
     android:id="@+id/order_container"
@@ -14,7 +14,8 @@
     android:padding="20dp"
     android:layout_margin="8dp"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="@color/colorSecondary">
 
     <ImageView
       android:id="@+id/product_order_image"
@@ -35,13 +36,14 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        tools:text="Order #2442SD"/>
+        android:text="@string/order_number"
+        android:textSize="25sp"/>
 
       <TextView
         android:id="@+id/order_date_placed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/date_placed"
         android:textSize="15sp"
         tools:text="12/3/20"/>
 
@@ -49,6 +51,7 @@
         android:id="@+id/item_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/item_cost"
         android:textSize="15sp"
         tools:text="$44.99"/>
 
@@ -87,13 +90,14 @@
     android:layout_margin="8dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/order_container"
+    android:background="@color/colorSecondary"
     android:clickable="true"
     android:focusable="true">
 
     <ImageView
       android:id="@+id/item2_image"
       android:layout_width="80dp"
-      android:layout_height="80dp"
+      android:layout_height="84dp"
       android:contentDescription="@string/product_image"
       android:src="@drawable/aq_image_placeholder"/>
 
@@ -109,6 +113,7 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/order_number"
         android:textSize="25sp"
         tools:text="Order #2442SD"/>
 
@@ -116,6 +121,7 @@
         android:id="@+id/order2_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/date_placed"
         android:textSize="15sp"
         tools:text="12/3/20"/>
 
@@ -123,6 +129,7 @@
         android:id="@+id/item2_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/item_cost"
         android:textSize="15sp"
         tools:text="$44.99"/>
 
@@ -161,6 +168,7 @@
     android:layout_margin="8dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/item2"
+    android:background="@color/colorSecondary"
     android:clickable="true"
     android:focusable="true">
 
@@ -183,6 +191,7 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/order_number"
         android:textSize="25sp"
         tools:text="Order #2442SD"/>
 
@@ -190,6 +199,7 @@
         android:id="@+id/order3_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/date_placed"
         android:textSize="15sp"
         tools:text="12/3/20"/>
 
@@ -197,6 +207,7 @@
         android:id="@+id/item3_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/item_cost"
         android:textSize="15sp"
         tools:text="$44.99"/>
 
@@ -235,6 +246,7 @@
     android:layout_margin="8dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/item3"
+    android:background="@color/colorSecondary"
     android:clickable="true"
     android:focusable="true">
 
@@ -257,6 +269,7 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/order_number"
         android:textSize="25sp"
         tools:text="Order #2442SD"/>
 
@@ -264,6 +277,7 @@
         android:id="@+id/order4_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/date_placed"
         android:textSize="15sp"
         tools:text="12/3/20"/>
 
@@ -271,6 +285,7 @@
         android:id="@+id/item4_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/item_cost"
         android:textSize="15sp"
         tools:text="$44.99"/>
 
@@ -309,6 +324,7 @@
     android:layout_margin="8dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/item4"
+    android:background="@color/colorSecondary"
     android:clickable="true"
     android:focusable="true">
 
@@ -331,6 +347,7 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/order_number"
         android:textSize="25sp"
         tools:text="Order #2442SD"/>
 
@@ -338,6 +355,7 @@
         android:id="@+id/order5_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/date_placed"
         android:textSize="15sp"
         tools:text="12/3/20"/>
 
@@ -345,6 +363,7 @@
         android:id="@+id/item5_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/item_cost"
         android:textSize="15sp"
         tools:text="$44.99"/>
 
@@ -383,6 +402,7 @@
     android:layout_margin="8dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/item5"
+    android:background="@color/colorSecondary"
     android:clickable="true"
     android:focusable="true">
 
@@ -405,6 +425,7 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/order_number"
         android:textSize="25sp"
         tools:text="Order #2442SD"/>
 
@@ -412,6 +433,7 @@
         android:id="@+id/order6_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/date_placed"
         android:textSize="15sp"
         tools:text="12/3/20"/>
 
@@ -419,6 +441,7 @@
         android:id="@+id/item6_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/item_cost"
         android:textSize="15sp"
         tools:text="$44.99"/>
 
@@ -457,6 +480,7 @@
     android:layout_margin="8dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/item6"
+    android:background="@color/colorSecondary"
     android:clickable="true"
     android:focusable="true">
 
@@ -479,6 +503,7 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/order_number"
         android:textSize="25sp"
         tools:text="Order #2442SD"/>
 
@@ -486,6 +511,7 @@
         android:id="@+id/order7_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/date_placed"
         android:textSize="15sp"
         tools:text="12/3/20"/>
 
@@ -493,6 +519,7 @@
         android:id="@+id/item7_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/item_cost"
         android:textSize="15sp"
         tools:text="$44.99"/>
 

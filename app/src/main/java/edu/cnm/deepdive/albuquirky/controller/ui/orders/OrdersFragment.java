@@ -36,38 +36,39 @@ public class OrdersFragment extends Fragment {
    */
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    binding = FragmentOrdersBinding.inflate(inflater, container, false);
+    binding = FragmentOrdersBinding.inflate(inflater);
+//    ordersViewModel = new ViewModelProvider(this).get(OrdersViewModel.class);
     return binding.getRoot();
   }
 
-  @Override
-  public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-    super.onViewCreated(view, savedInstanceState);
-    setupViewModel();
-  }
+//  @Override
+//  public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+//    super.onViewCreated(view, savedInstanceState);
+//    setupViewModel();
+//  }
 
-   private void setupViewModel() {
-     FragmentActivity activity = getActivity();
-     adapter = new OrdersRecyclerAdapter(activity);
-//     binding.ordersList.setAdapter(adapter);
-     ordersViewModel = new ViewModelProvider(activity).get(OrdersViewModel.class);
+//   private void setupViewModel() {
+//     FragmentActivity activity = getActivity();
+//     adapter = new OrdersRecyclerAdapter(activity);
+////     binding.ordersList.setAdapter(adapter);
+//     ordersViewModel = new ViewModelProvider(activity).get(OrdersViewModel.class);
 //     getLifecycle().addObserver(viewModel);
 //     LifecycleOwner lifecycleOwner = getViewLifecycleOwner();
   //   viewModel.getText().observe(lifecycleOwner, this::updateOrdersList);
-
-   }
+//
+//   }
 
 //  private void updateOrdersList(Li) {
 //
 //  }
 
-  private void updateOrdersList(List<ProductOnOrder> orders) {
-    adapter.getOrders().clear();
-    adapter.getOrders().addAll(orders);
-    adapter.notifyItemInserted(orders.size());
+//  private void updateOrdersList(List<ProductOnOrder> orders) {
+//    adapter.getOrders().clear();
+//    adapter.getOrders().addAll(orders);
+//    adapter.notifyItemInserted(orders.size());
      //noinspection ConstantConditions
 //     binding.ordersList.getLayoutManager().scrollToPosition(orders.size() - 1);
-  
-   }
+//
+//   }
 
 }
