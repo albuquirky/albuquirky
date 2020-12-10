@@ -1,0 +1,11 @@
+edu.cnm.deepdive.albuquirky
+edu.cnm.deepdive.albuquirky.adapter
+edu.cnm.deepdive.albuquirky.controller
+edu.cnm.deepdive.albuquirky.controller.ui.browse
+edu.cnm.deepdive.albuquirky.controller.ui.commission
+edu.cnm.deepdive.albuquirky.controller.ui.orders
+edu.cnm.deepdive.albuquirky.controller.ui.products
+edu.cnm.deepdive.albuquirky.controller.ui.profile
+edu.cnm.deepdive.albuquirky.databinding
+edu.cnm.deepdive.albuquirky.model
+edu.cnm.deepdive.albuquirky.service
