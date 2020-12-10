@@ -20,6 +20,9 @@
   <string name="product_image">Product Image</string>
   <string name="search_term_hint">Search Term</string>
   <string name="profile_image_prompt">Select profile image</string>
+  <string name="order_number">Order #123AH</string>
+  <string name="date_placed">12/05/20</string>
+  <string name="item_cost">$19.99</string>
   <string name="profile_picture">Profile Picture</string>
   <string name="profile_username">Username :</string>
   <string name="hint_username">Username</string>
