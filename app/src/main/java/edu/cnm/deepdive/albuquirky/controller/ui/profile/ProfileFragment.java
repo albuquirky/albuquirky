@@ -21,23 +21,34 @@ import edu.cnm.deepdive.albuquirky.service.AlbuquirkyWebService;
 import edu.cnm.deepdive.albuquirky.service.GoogleSignInService;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * Displays the profiles_fragment layout and populates text fields by getting information
+ * from the profile entity in the database and gives the option of updating the information.
+ */
 public class ProfileFragment extends Fragment implements OnClickListener {
 
+  /**
+   * Integer used as identifier for the selecting an image intent
+   */
   public static final int PROFILE_IMAGE_REQUEST_CODE = 1024;
   private FragmentProfileBinding binding;
   private ProfileViewModel profileViewModel;
   private AlbuquirkyWebService webService;
   private Profile user;
 
+  /**
+   * Initial View of the profile_fragment
+   *
+   * @param inflater - service to convert xml layout to objects
+   * @param container - view used to contain other views
+   * @param savedInstanceState - used to store pass data between bundles
+   * @return binding.getRoot() - the outermost View
+   */
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-
     binding = FragmentProfileBinding.inflate(inflater, container, false);
     binding.profilePicture.setOnClickListener((v) -> selectProfileImage());
     binding.updateProfile.setOnClickListener((v) -> updateProfile());
-
-
-//    binding.inputEmail.setText(profileViewModel.getUser().getValue().getEmail());
     return binding.getRoot();
   }
 
@@ -79,6 +90,5 @@ public class ProfileFragment extends Fragment implements OnClickListener {
 
   @Override
   public void onClick(View v) {
-
   }
 }

@@ -9,10 +9,19 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import edu.cnm.deepdive.albuquirky.databinding.FragmentCarouselItemBinding;
 
+/**
+ * Fragment to display images in a carousel
+ */
 public class CarouselItemFragment extends Fragment {
 
   private FragmentCarouselItemBinding binding;
 
+  /**
+   * Gets an instance of an Image from the server and puts it in the carousel to display
+   *
+   * @param - instance of image (to be added at later date)
+   * @return fragment - CarouselItemFragment
+   */
   public static CarouselItemFragment getInstance(/* TODO Pass in instance of Image object from server */) {
     CarouselItemFragment fragment = new CarouselItemFragment();
 //    if (/* image != null */) {

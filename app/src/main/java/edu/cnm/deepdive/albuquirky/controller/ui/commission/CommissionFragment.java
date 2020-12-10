@@ -14,10 +14,21 @@ import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.albuquirky.R;
 import edu.cnm.deepdive.albuquirky.databinding.FragmentCommissionsBinding;
 
+/**
+ * Reusable UI layout to display commissions
+ */
 public class CommissionFragment extends Fragment {
 
   private FragmentCommissionsBinding binding;
 
+  /**
+   * Initial display of commissions
+   *
+   * @param inflater - service to convert layout to View objects
+   * @param container - a view to hold other views to display
+   * @param savedInstanceState - storage to pass data between activities
+   * @return View object
+   */
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
     binding = FragmentCommissionsBinding.inflate(inflater, container, false);

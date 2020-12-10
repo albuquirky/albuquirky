@@ -24,7 +24,7 @@
   <ImageView
     android:id="@+id/profile_picture"
     android:src="@drawable/user_default"
-    android:contentDescription="Profile Picture"
+    android:contentDescription="@string/profile_picture"
     android:padding="8dp"
     android:layout_width="0dp"
     android:layout_height="140dp"
@@ -35,7 +35,7 @@
 
   <TextView
     android:id="@+id/username"
-    android:text="Username :"
+    android:text="@string/profile_username"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="8dp"
@@ -47,7 +47,7 @@
   <EditText
     android:id="@+id/input_username"
     android:autofillHints="Edit Username"
-    android:hint="Username"
+    android:hint="@string/hint_username"
     android:inputType="text"
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
@@ -59,7 +59,7 @@
 
   <TextView
     android:id="@+id/email"
-    android:text="Email :"
+    android:text="@string/profile_email"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="8dp"
@@ -71,7 +71,7 @@
   <EditText
     android:id="@+id/input_email"
     android:autofillHints="Edit Email"
-    android:hint="Contact Email"
+    android:hint="@string/hint_contact_email"
     android:inputType="textEmailAddress"
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
@@ -83,7 +83,7 @@
 
   <TextView
     android:id="@+id/address"
-    android:text="Address :"
+    android:text="@string/profile_address"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="8dp"
@@ -95,7 +95,7 @@
   <EditText
     android:id="@+id/input_address"
     android:autofillHints="Edit Address"
-    android:hint="User Address"
+    android:hint="@string/hint_user_address"
     android:inputType="textPostalAddress"
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
@@ -107,7 +107,7 @@
 
   <Button
     android:id="@+id/upload_profile_image"
-    android:text="Upload Image"
+    android:text="@string/button_upload_image"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="8dp"
@@ -118,7 +118,7 @@
 
   <Button
     android:id="@+id/update_profile"
-    android:text="Update"
+    android:text="@string/button_update"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     app:layout_constraintWidth_percent="0.5"

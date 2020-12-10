@@ -7,14 +7,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import edu.cnm.deepdive.albuquirky.adapter.OrdersRecyclerAdapter.Holder;
 import edu.cnm.deepdive.albuquirky.databinding.OrdersBinding;
-import edu.cnm.deepdive.albuquirky.model.Order;
-import edu.cnm.deepdive.albuquirky.model.Product;
 import edu.cnm.deepdive.albuquirky.model.ProductOnOrder;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Adapter to bind views to orders and prices
  */
 public class OrdersRecyclerAdapter extends RecyclerView.Adapter<Holder> {
 
@@ -24,8 +22,9 @@ public class OrdersRecyclerAdapter extends RecyclerView.Adapter<Holder> {
 //  private final Image image;
 
   /**
+   * Constructor to initialize {@link OrdersRecyclerAdapter}
    *
-   * @param context
+   * @param context - link to system
    */
   public OrdersRecyclerAdapter(Context context) {
     this.context = context;
@@ -34,8 +33,9 @@ public class OrdersRecyclerAdapter extends RecyclerView.Adapter<Holder> {
   }
 
   /**
+   * Gets list of orders
    *
-   * @return
+   * @return orders - list of orders
    */
   public List<ProductOnOrder> getOrders() {
     return orders;
@@ -56,34 +56,35 @@ public class OrdersRecyclerAdapter extends RecyclerView.Adapter<Holder> {
   @Override
   public int getItemCount() {
     return orders.size();
-}
+  }
 
   /**
-   *
+   * Storage for component views
    */
   class Holder extends RecyclerView.ViewHolder {
 
-  private final OrdersBinding binding;
+    private final OrdersBinding binding;
 
     /**
-     * 
-     * @param binding
+     * Constructor to initialize {@link Holder}
+     *
+     * @param binding - links UI components to data
      */
-  public Holder(@NonNull OrdersBinding binding) {
-    super(binding.getRoot());
-    this.binding = binding;
-  }
+    public Holder(@NonNull OrdersBinding binding) {
+      super(binding.getRoot());
+      this.binding = binding;
+    }
 
-  private void bind(int position) {
-    ProductOnOrder order = orders.get(position);
+    private void bind(int position) {
+      ProductOnOrder order = orders.get(position);
 //    binding.itemNameOrderId.setText(order.getProduct());
-    binding.itemCost.setText(order.getUnitPrice());
+      binding.itemCost.setText(order.getUnitPrice());
 //      Product
 //      binding.itemNameOrderId.setText(Product..);
 //      binding.itemNameOrderId.setText(order.getOrderId);
 //      binding.orderDatePlaced.setText(order.getPlacedDate());
 //      binding.itemCost.setText();
 //      binding.productOrderImage.;
+    }
   }
-}
 }

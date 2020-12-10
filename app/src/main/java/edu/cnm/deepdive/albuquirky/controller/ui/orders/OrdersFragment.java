@@ -19,7 +19,7 @@ import edu.cnm.deepdive.albuquirky.model.ProductOnOrder;
 import java.util.List;
 
 /**
- *
+ * Fragment to display orders
  */
 public class OrdersFragment extends Fragment {
 
@@ -29,10 +29,11 @@ public class OrdersFragment extends Fragment {
 
   /**
    *
-   * @param inflater
-   * @param container
-   * @param savedInstanceState
-   * @return
+   *
+   * @param inflater - service to convert layout to View objects
+   * @param container - a view to hold other views to display
+   * @param savedInstanceState - storage to pass data between activities
+   * @return View object
    */
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {

@@ -19,6 +19,9 @@ import androidx.appcompat.widget.Toolbar;
 import edu.cnm.deepdive.albuquirky.service.UserRepository;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 
+/**
+ * Base class that allows use of newer activities on older devices
+ */
 public class MainActivity extends AppCompatActivity {
 
   private AppBarConfiguration mAppBarConfiguration;

@@ -7,21 +7,29 @@
   <string name="nav_header_desc">Navigation header</string>
   <string name="action_settings">Settings</string>
 
-
   <string name="login_failure_message">Unable to sign-in with provided credentials</string>
   <string name="menu_profile">Your Profile</string>
   <string name="menu_products">Your Products</string>
   <string name="menu_commissions">Your Commissions</string>
-  <!-- TODO: Remove or change this placeholder text -->
+
+  <string name="profile_image_prompt">Select profile image</string>
+  <string name="profile_picture">Profile Picture</string>
+  <string name="profile_username">Username :</string>
+  <string name="hint_username">Username</string>
+  <string name="profile_email">Email :</string>
+  <string name="hint_contact_email">Contact Email</string>
+  <string name="profile_address">Address :</string>
+  <string name="hint_user_address">User Address</string>
+  <string name="button_upload_image">Upload Image</string>
+  <string name="button_update">Update</string>
+
   <string name="hello_blank_fragment">Hello blank fragment</string>
   <string name="menu_orders">Your Orders</string>
   <string name="menu_browser">Browse</string>
   <string name="order_fulfilled">Order fulfilled</string>
   <string name="product_image">Product Image</string>
   <string name="search_term_hint">Search Term</string>
-  <string name="profile_image_prompt">Select profile image</string>
   <string name="order_number">Order #123AH</string>
   <string name="date_placed">12/05/20</string>
   <string name="item_cost">$19.99</string>
-
 </resources>
