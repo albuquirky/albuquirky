@@ -16,6 +16,7 @@ import okhttp3.logging.HttpLoggingInterceptor.Level;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -185,6 +186,7 @@ public interface AlbuquirkyWebService {
           .addInterceptor(interceptor)
           .build();
       Retrofit retrofit = new Retrofit.Builder()
+          .addConverterFactory(ScalarsConverterFactory.create())
           .addConverterFactory(GsonConverterFactory.create(gson))
           .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
           .client(client)
