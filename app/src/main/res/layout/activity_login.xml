@@ -5,7 +5,31 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:background="@color/colorBackground"
   tools:context=".controller.LoginActivity">
+
+  <ImageView
+    android:id="@+id/app_logo"
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    android:src="@drawable/aq_logo_image"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/app_title"/>
+
+  <TextView
+    android:id="@+id/app_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/colorPrimary"
+    android:textSize="40sp"
+    android:textStyle="bold"
+    android:text="@string/app_name"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/app_logo"
+    app:layout_constraintBottom_toTopOf="@id/sign_in"/>
 
   <com.google.android.gms.common.SignInButton
     android:id="@+id/sign_in"
@@ -14,7 +38,7 @@
     android:padding="@dimen/half_margin"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/app_title"
     app:layout_constraintEnd_toEndOf="parent"/>
 
 
