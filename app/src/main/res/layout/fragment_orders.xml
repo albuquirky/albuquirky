@@ -113,7 +113,7 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/order_number"
+        android:text="Order #321XY"
         android:textSize="25sp"
         tools:text="Order #2442SD"/>
 
@@ -121,7 +121,7 @@
         android:id="@+id/order2_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/date_placed"
+        android:text="12/02/20"
         android:textSize="15sp"
         tools:text="12/3/20"/>
 
@@ -129,7 +129,7 @@
         android:id="@+id/item2_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/item_cost"
+        android:text="$24.99"
         android:textSize="15sp"
         tools:text="$44.99"/>
 
@@ -191,7 +191,7 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/order_number"
+        android:text="Order #543IO"
         android:textSize="25sp"
         tools:text="Order #2442SD"/>
 
@@ -199,7 +199,7 @@
         android:id="@+id/order3_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/date_placed"
+        android:text="12/01/20"
         android:textSize="15sp"
         tools:text="12/3/20"/>
 
@@ -207,7 +207,7 @@
         android:id="@+id/item3_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/item_cost"
+        android:text="8.99"
         android:textSize="15sp"
         tools:text="$44.99"/>
 
@@ -238,317 +238,317 @@
 
   </LinearLayout>
 
-  <LinearLayout
-    android:id="@+id/item4"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="20dp"
-    android:layout_margin="8dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/item3"
-    android:background="@color/colorSecondary"
-    android:clickable="true"
-    android:focusable="true">
+<!--  <LinearLayout-->
+<!--    android:id="@+id/item4"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:padding="20dp"-->
+<!--    android:layout_margin="8dp"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintTop_toBottomOf="@id/item3"-->
+<!--    android:background="@color/colorSecondary"-->
+<!--    android:clickable="true"-->
+<!--    android:focusable="true">-->
 
-    <ImageView
-      android:id="@+id/item4_image"
-      android:layout_width="80dp"
-      android:layout_height="80dp"
-      android:contentDescription="@string/product_image"
-      android:src="@drawable/aq_image_placeholder"/>
+<!--    <ImageView-->
+<!--      android:id="@+id/item4_image"-->
+<!--      android:layout_width="80dp"-->
+<!--      android:layout_height="80dp"-->
+<!--      android:contentDescription="@string/product_image"-->
+<!--      android:src="@drawable/aq_image_placeholder"/>-->
 
-    <LinearLayout
-      android:id="@+id/order4_info"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="15dp"
-      android:orientation="vertical">
+<!--    <LinearLayout-->
+<!--      android:id="@+id/order4_info"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_marginStart="15dp"-->
+<!--      android:orientation="vertical">-->
 
-      <TextView
-        android:id="@+id/item4_name"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/order_number"
-        android:textSize="25sp"
-        tools:text="Order #2442SD"/>
+<!--      <TextView-->
+<!--        android:id="@+id/item4_name"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/order_number"-->
+<!--        android:textSize="25sp"-->
+<!--        tools:text="Order #2442SD"/>-->
 
-      <TextView
-        android:id="@+id/order4_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/date_placed"
-        android:textSize="15sp"
-        tools:text="12/3/20"/>
+<!--      <TextView-->
+<!--        android:id="@+id/order4_date"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/date_placed"-->
+<!--        android:textSize="15sp"-->
+<!--        tools:text="12/3/20"/>-->
 
-      <TextView
-        android:id="@+id/item4_cost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/item_cost"
-        android:textSize="15sp"
-        tools:text="$44.99"/>
+<!--      <TextView-->
+<!--        android:id="@+id/item4_cost"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/item_cost"-->
+<!--        android:textSize="15sp"-->
+<!--        tools:text="$44.99"/>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-    <LinearLayout
-      android:id="@+id/order4_fulfilled_box"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      android:layout_margin="15dp">
+<!--    <LinearLayout-->
+<!--      android:id="@+id/order4_fulfilled_box"-->
+<!--      android:layout_width="match_parent"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:orientation="vertical"-->
+<!--      android:layout_margin="15dp">-->
 
-      <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:layout_marginStart="10dp"/>
+<!--      <CheckBox-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:layout_marginStart="10dp"/>-->
 
-      <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="@string/order_fulfilled"
-        android:textAlignment="center"/>
+<!--      <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="@string/order_fulfilled"-->
+<!--        android:textAlignment="center"/>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-  </LinearLayout>
+<!--  </LinearLayout>-->
 
-  <LinearLayout
-    android:id="@+id/item5"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="20dp"
-    android:layout_margin="8dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/item4"
-    android:background="@color/colorSecondary"
-    android:clickable="true"
-    android:focusable="true">
+<!--  <LinearLayout-->
+<!--    android:id="@+id/item5"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:padding="20dp"-->
+<!--    android:layout_margin="8dp"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintTop_toBottomOf="@id/item4"-->
+<!--    android:background="@color/colorSecondary"-->
+<!--    android:clickable="true"-->
+<!--    android:focusable="true">-->
 
-    <ImageView
-      android:id="@+id/item5_image"
-      android:layout_width="80dp"
-      android:layout_height="80dp"
-      android:contentDescription="@string/product_image"
-      android:src="@drawable/aq_image_placeholder"/>
+<!--    <ImageView-->
+<!--      android:id="@+id/item5_image"-->
+<!--      android:layout_width="80dp"-->
+<!--      android:layout_height="80dp"-->
+<!--      android:contentDescription="@string/product_image"-->
+<!--      android:src="@drawable/aq_image_placeholder"/>-->
 
-    <LinearLayout
-      android:id="@+id/order5_info"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="15dp"
-      android:orientation="vertical">
+<!--    <LinearLayout-->
+<!--      android:id="@+id/order5_info"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_marginStart="15dp"-->
+<!--      android:orientation="vertical">-->
 
-      <TextView
-        android:id="@+id/item5_name"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/order_number"
-        android:textSize="25sp"
-        tools:text="Order #2442SD"/>
+<!--      <TextView-->
+<!--        android:id="@+id/item5_name"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/order_number"-->
+<!--        android:textSize="25sp"-->
+<!--        tools:text="Order #2442SD"/>-->
 
-      <TextView
-        android:id="@+id/order5_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/date_placed"
-        android:textSize="15sp"
-        tools:text="12/3/20"/>
+<!--      <TextView-->
+<!--        android:id="@+id/order5_date"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/date_placed"-->
+<!--        android:textSize="15sp"-->
+<!--        tools:text="12/3/20"/>-->
 
-      <TextView
-        android:id="@+id/item5_cost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/item_cost"
-        android:textSize="15sp"
-        tools:text="$44.99"/>
+<!--      <TextView-->
+<!--        android:id="@+id/item5_cost"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/item_cost"-->
+<!--        android:textSize="15sp"-->
+<!--        tools:text="$44.99"/>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-    <LinearLayout
-      android:id="@+id/order5_fulfilled_box"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      android:layout_margin="15dp">
+<!--    <LinearLayout-->
+<!--      android:id="@+id/order5_fulfilled_box"-->
+<!--      android:layout_width="match_parent"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:orientation="vertical"-->
+<!--      android:layout_margin="15dp">-->
 
-      <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:layout_marginStart="10dp"/>
+<!--      <CheckBox-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:layout_marginStart="10dp"/>-->
 
-      <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="@string/order_fulfilled"
-        android:textAlignment="center"/>
+<!--      <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="@string/order_fulfilled"-->
+<!--        android:textAlignment="center"/>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-  </LinearLayout>
+<!--  </LinearLayout>-->
 
-  <LinearLayout
-    android:id="@+id/item6"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="20dp"
-    android:layout_margin="8dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/item5"
-    android:background="@color/colorSecondary"
-    android:clickable="true"
-    android:focusable="true">
+<!--  <LinearLayout-->
+<!--    android:id="@+id/item6"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:padding="20dp"-->
+<!--    android:layout_margin="8dp"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintTop_toBottomOf="@id/item5"-->
+<!--    android:background="@color/colorSecondary"-->
+<!--    android:clickable="true"-->
+<!--    android:focusable="true">-->
 
-    <ImageView
-      android:id="@+id/item6_image"
-      android:layout_width="80dp"
-      android:layout_height="80dp"
-      android:contentDescription="@string/product_image"
-      android:src="@drawable/aq_image_placeholder"/>
+<!--    <ImageView-->
+<!--      android:id="@+id/item6_image"-->
+<!--      android:layout_width="80dp"-->
+<!--      android:layout_height="80dp"-->
+<!--      android:contentDescription="@string/product_image"-->
+<!--      android:src="@drawable/aq_image_placeholder"/>-->
 
-    <LinearLayout
-      android:id="@+id/order6_info"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="15dp"
-      android:orientation="vertical">
+<!--    <LinearLayout-->
+<!--      android:id="@+id/order6_info"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_marginStart="15dp"-->
+<!--      android:orientation="vertical">-->
 
-      <TextView
-        android:id="@+id/item6_name"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/order_number"
-        android:textSize="25sp"
-        tools:text="Order #2442SD"/>
+<!--      <TextView-->
+<!--        android:id="@+id/item6_name"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/order_number"-->
+<!--        android:textSize="25sp"-->
+<!--        tools:text="Order #2442SD"/>-->
 
-      <TextView
-        android:id="@+id/order6_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/date_placed"
-        android:textSize="15sp"
-        tools:text="12/3/20"/>
+<!--      <TextView-->
+<!--        android:id="@+id/order6_date"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/date_placed"-->
+<!--        android:textSize="15sp"-->
+<!--        tools:text="12/3/20"/>-->
 
-      <TextView
-        android:id="@+id/item6_cost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/item_cost"
-        android:textSize="15sp"
-        tools:text="$44.99"/>
+<!--      <TextView-->
+<!--        android:id="@+id/item6_cost"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/item_cost"-->
+<!--        android:textSize="15sp"-->
+<!--        tools:text="$44.99"/>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-    <LinearLayout
-      android:id="@+id/order6_fulfilled_box"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      android:layout_margin="15dp">
+<!--    <LinearLayout-->
+<!--      android:id="@+id/order6_fulfilled_box"-->
+<!--      android:layout_width="match_parent"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:orientation="vertical"-->
+<!--      android:layout_margin="15dp">-->
 
-      <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:layout_marginStart="10dp"/>
+<!--      <CheckBox-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:layout_marginStart="10dp"/>-->
 
-      <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="@string/order_fulfilled"
-        android:textAlignment="center"/>
+<!--      <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="@string/order_fulfilled"-->
+<!--        android:textAlignment="center"/>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-  </LinearLayout>
+<!--  </LinearLayout>-->
 
-  <LinearLayout
-    android:id="@+id/item7"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="20dp"
-    android:layout_margin="8dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/item6"
-    android:background="@color/colorSecondary"
-    android:clickable="true"
-    android:focusable="true">
+<!--  <LinearLayout-->
+<!--    android:id="@+id/item7"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:padding="20dp"-->
+<!--    android:layout_margin="8dp"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintTop_toBottomOf="@id/item6"-->
+<!--    android:background="@color/colorSecondary"-->
+<!--    android:clickable="true"-->
+<!--    android:focusable="true">-->
 
-    <ImageView
-      android:id="@+id/item7_image"
-      android:layout_width="80dp"
-      android:layout_height="80dp"
-      android:contentDescription="@string/product_image"
-      android:src="@drawable/aq_image_placeholder"/>
+<!--    <ImageView-->
+<!--      android:id="@+id/item7_image"-->
+<!--      android:layout_width="80dp"-->
+<!--      android:layout_height="80dp"-->
+<!--      android:contentDescription="@string/product_image"-->
+<!--      android:src="@drawable/aq_image_placeholder"/>-->
 
-    <LinearLayout
-      android:id="@+id/order7_info"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="15dp"
-      android:orientation="vertical">
+<!--    <LinearLayout-->
+<!--      android:id="@+id/order7_info"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_marginStart="15dp"-->
+<!--      android:orientation="vertical">-->
 
-      <TextView
-        android:id="@+id/item7_name"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/order_number"
-        android:textSize="25sp"
-        tools:text="Order #2442SD"/>
+<!--      <TextView-->
+<!--        android:id="@+id/item7_name"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/order_number"-->
+<!--        android:textSize="25sp"-->
+<!--        tools:text="Order #2442SD"/>-->
 
-      <TextView
-        android:id="@+id/order7_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/date_placed"
-        android:textSize="15sp"
-        tools:text="12/3/20"/>
+<!--      <TextView-->
+<!--        android:id="@+id/order7_date"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/date_placed"-->
+<!--        android:textSize="15sp"-->
+<!--        tools:text="12/3/20"/>-->
 
-      <TextView
-        android:id="@+id/item7_cost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/item_cost"
-        android:textSize="15sp"
-        tools:text="$44.99"/>
+<!--      <TextView-->
+<!--        android:id="@+id/item7_cost"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/item_cost"-->
+<!--        android:textSize="15sp"-->
+<!--        tools:text="$44.99"/>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-    <LinearLayout
-      android:id="@+id/order7_fulfilled_box"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      android:layout_margin="15dp">
+<!--    <LinearLayout-->
+<!--      android:id="@+id/order7_fulfilled_box"-->
+<!--      android:layout_width="match_parent"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:orientation="vertical"-->
+<!--      android:layout_margin="15dp">-->
 
-      <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:layout_marginStart="10dp"/>
+<!--      <CheckBox-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:layout_marginStart="10dp"/>-->
 
-      <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="@string/order_fulfilled"
-        android:textAlignment="center"/>
+<!--      <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="@string/order_fulfilled"-->
+<!--        android:textAlignment="center"/>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-  </LinearLayout>
+<!--  </LinearLayout>-->
 
 
 

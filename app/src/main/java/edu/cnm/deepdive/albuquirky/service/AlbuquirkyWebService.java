@@ -94,7 +94,7 @@ public interface AlbuquirkyWebService {
   Single<String> updateCommissionRequest(
       @Header("Authorization") String bearerToken, @Path("commissionId") long id);
 
-  @GET("products")
+  @GET("products/{keyword}")
   Single<List<Product>> search(
       @Header("Authorization") String authHeader, @Query("keyword") String keyword);
 
