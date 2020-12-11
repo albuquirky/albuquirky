@@ -16,7 +16,6 @@ public class Profile {
   @Expose
   private String email;
 
-  @Expose
   private String image;
 
   @Expose
